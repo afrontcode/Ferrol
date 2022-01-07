@@ -1,0 +1,149 @@
+-
+    img_path = 'assets/images/'
+-
+     cards = [
+        {
+            id:"#kdModal",
+            image:"sal-kd",
+            title: "KD "
+        },
+        {
+            id:"#Modal",
+            image:"10-30-B-min",
+            title: "10/30"
+        },
+        {
+            id:"#salgruesa",
+            image:"molida-gruesa",
+            title: "Molida gruesa"
+        },
+        {
+            id:"#refinadagruesa",
+            image:"refinada-gruesa",
+            title: "Refinada gruesa"
+        },
+        {
+            id:"#molidaFina",
+            image:"molida-fina",
+            title: "Molida Fina"
+        },
+        {
+            id:"#RefinadaFina",
+            image:"refinada-fina",
+            title: "Refinada Fina"
+        },
+        {
+            id:"#treinta-ochenta",
+            image:"3080",
+            title: "30/80"
+        },
+        {
+            id:"#impalpable",
+            image:"impalpable",
+            title: "Impalpable"
+        }
+    ]
+
+-
+    modals = [
+        {
+            id:"kdModal",
+            title: "KD",
+            descripcion: "Sal marina secada a más de 110 grados centígrados, de granulometría extra-gruesa, libre de finos; clasificada y seleccionada, para obtener un productode grado alimentario, seco, de fácil dosificación y de menor velocidad de disolución que laspresentaciones de menor granulometría. Desarrollada para la preparación controlada de salmueras de calidad alimentaria.",
+            presentacion: "50kg y 25 kg.",
+            envase:"bolsa sellada por calor recubierta con saco laminado.",
+            image:"sal-kd"
+        },
+        {
+            id:"Modal",
+            title: "10/30",
+            descripcion: "Sal marina secada a más de 110 grados centígrados, de granulometría gruesa, libre de finos; clasificada y seleccionada, para obtener un producto de grado alimentario, seco, de fácil dosificación y de menor velocidad de disolución que las presentaciones de menor granulometría. Desarrollada para procesos de salazón de pescados y carnes.",
+            presentacion: "50kg y 25 kg.",
+            envase:"bolsa sellada por calor recubierta con saco laminado.",
+            image:"10-30-B-min"
+        },
+        {
+            id:"salgruesa",
+            title: "Molida gruesa",
+            descripcion: "Sal marina secada a más de 100 grados centígrados; molida y seleccionada, para obtener un producto de grado alimentario, libre de insolubles. Desarrollada para la preparación de pescado seco salado y el mantenimiento de la cadena de frio.",
+            presentacion: "50kg y 25 kg.",
+            envase:"bolsa sellada por calor recubierta con saco laminado.",
+            image:"molida-gruesa"
+        },
+        {
+            id:"refinadagruesa",
+            title: "Refinada gruesa",
+            descripcion: "Sal marina secada a más de 110 grados centígrados; molida, clasificada y seleccionada, para obtener un producto de grado alimentario, seco y de fácil dosificación. Desarrollada para la industria alimentaria que requiera sal de granulometría específica para su proceso productivo. En un proceso colaborativo se desarrolla el producto con las especificaciones del cliente.",
+            presentacion: "50kg y 25 kg.",
+            envase:"bolsa sellada por calor recubierta con saco laminado.",
+            image:"refinada-gruesa"
+        },
+         {
+            id:"molidaFina",
+            title: "Molida Fina",
+            descripcion: "Sal marina secada a más de 100 grados centígrados; molida y seleccionada, para obtener un producto de grado alimentario de alta solubilidad, libre de insolubles. Desarrollada para la preparación de quesos, conservas y otros procesos que requieran preparar salmueras homogéneas rápidamente.",
+            presentacion: "50kg y 25 kg.",
+            envase:"bolsa sellada por calor recubierta con saco laminado.",
+            image:"molida-fina"
+        },
+        {
+            id:"RefinadaFina",
+            title: "Refinada Fina",
+            descripcion: "Sal marina secada a más de 110 grados centígrados, de granulometría fina; molida, clasificada y seleccionada, para obtener un producto de grado alimentario, de fácil dosificación y alta solubilidad, libre de insolubles. Desarrollada para la industria de la panificación, embutidos, productos cárnicos, precocinados, conservas, salsas, chocolates, productos lácteos y pastelería.",
+            presentacion: "50kg y 25 kg y 25 unidades de 1 kg.",
+            envase:"bolsa sellada por calor recubierta con saco laminado.",
+            image:"refinada-fina"
+        },
+        {
+            id:"treinta-ochenta",
+            title: "30/80",
+            descripcion: "Sal marina secada a más de 120 grados centígrados de granulometría fina, molida, clasificada y seleccionada, para obtener un producto de grado alimentario, seco, de fácil dosificación y alta solubilidad, libre de insolubles. Desarrollada para la preparación de productos alimentarios de calidad premium.",
+            presentacion: "50kg y 25 kg.",
+            envase:"bolsa sellada por calor recubierta con saco laminado.",
+            image:"3080"
+        },
+        {
+            id:"impalpable",
+            title: "Impalpable",
+            descripcion: "Sal marina secada a más de 110 grados centígrados de granulometría muy fina, seleccionada, para obtener un producto de grado alimentario, seco y de fácil dosificación y alta solubilidad, libre de insolubles. Desarrollada para usos que requieren una mayor dispersión y adherencia en seco a la superficie del insumo.",
+            presentacion: "50kg y 25 kg.",
+            envase:"bolsa sellada por calor recubierta con saco laminado.",
+            image:"impalpable"
+        },
+        
+    ]
+
+
+.productos-section(id="productos")  
+        .container
+            .productos-section__content
+                .row 
+                    .col-sm-12.text-center
+                        h3 Nuestros productos
+                .row.mt-5
+                    each card in cards
+                        .col-sm-3
+                            a.card-content( data-toggle="modal" data-target=`${card.id}`)
+                                .card.card-ferrol
+                                    img.card-img-top(src=img_path+`${card.image}.jpg`)
+                                    .card-body
+                                        .card-title.text-center  #{card.title}
+
+each modal in modals
+    .modal.fade(id=`${modal.id}` tabindex='-1' role='dialog' aria-hidden="true")
+        .modal-dialog.modal-lg(role='document')
+            .modal-close-button
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times; 
+            .modal-content.blue-modal
+                .modal-body
+                    h4 #{modal.title}
+                    .line
+                    .descripcion 
+                        p #{modal.descripcion}
+                    .item
+                        p <strong>Presentaciones:</strong> #{modal.presentacion}
+                    .item
+                        p <strong>Envase:</strong> #{modal.envase}
+                .modal-image 
+                    img(src=img_path+`${modal.image}.jpg`)

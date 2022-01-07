@@ -1,0 +1,168 @@
+.button{
+ 
+    border: none;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 56px;
+    font-weight: 700;
+
+    @include mq($from: lg) {
+        font-size: 16px;
+    }
+
+   & span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   }
+ 
+   & span::after{
+    content: '\2192';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+   }
+
+   &:hover span{
+    padding-right: 25px;
+   }
+
+   &:hover span::after{
+    opacity: 1;
+    right: 0;
+   }
+
+}
+
+.button_primary{
+    background-color: #00A372;
+    color: #fff;
+    padding: 18px 32px;
+}
+
+.button_primary-m{
+    background-color: #00A372;
+    color: #fff;
+    padding: 18px 32px;
+    font-size: 14px;
+    display: initial;
+}
+
+.button_white{
+    background-color: #fff;
+    color: #3E3E3E;
+}
+
+.button_cta {
+    border: none;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 56px;
+    font-weight: 700;
+    background-color: #fff;
+    color: #3E3E3E;
+
+    @include mq($from: lg) {
+        font-size: 16px;
+    }
+
+    & span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+       }
+     
+       & span::after{
+        content: '\2192';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+       }
+    
+       &:hover span{
+        padding-right: 25px;
+       }
+    
+       &:hover span::after{
+        opacity: 1;
+        right: 0;
+       }
+}
+
+.buttons-social_container{
+    margin-top:3rem ;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.button-social{
+    border: none;
+    padding: 18px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 56px;
+    margin-right: 24px ;
+    margin-left: 24px;
+    margin-bottom: 24px;
+
+    a{
+        text-decoration: none;
+    
+    }
+
+    .text{
+        margin-left: 8px;
+     }
+
+    &.whatsapp{
+        border:1px solid #27AE60;
+        color: #27AE60;
+
+        &:hover{
+            background-color: #27AE60;
+            color: #fff;
+        }
+    }
+
+    &.messenger{
+        border:1px solid #2D9CDB;
+        color: #2D9CDB;
+
+        &:hover{
+            background-color: #2D9CDB;
+            color: #fff;
+        }
+    }
+
+    &.mail{
+        border:1px solid #F38941;
+        color: #F38941;
+
+        &:hover{
+            background-color: #F38941;
+            color: #fff;
+        }
+    }
+}
+
+
+

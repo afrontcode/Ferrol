@@ -1,0 +1,65 @@
+.caracteristicas-section {
+    background-image: url('/../../assets/images/fondo_2.jpg');
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+
+    @include mq($from: lg) {
+        background-image: url('/../../assets/images/fondo_2.jpg');
+     }
+
+     .container{
+        height: 100%;
+     }
+
+     &__content{
+        height: 100%;
+    
+         .content-box{
+            height: 100%;
+
+            &__column{
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+
+         }
+         .content_icon{
+            text-align: center;
+            width: 100%;
+            
+             color: #ffffff;
+             h3{
+                 font-size: 60px;
+                 margin-bottom: 3rem;
+             }
+
+
+             .item-icon{
+                margin: auto;
+                max-width: 240px;
+                margin-bottom: 4rem;
+                 img{
+                     width: 100px;
+                     margin-bottom: 1rem;
+                 }
+                p{
+                    margin-bottom: 2rem;
+                }
+
+                &__3{
+                    img{ width: 90px;} 
+                }
+             }
+
+
+             .information-cotent{
+                 p{
+                     font-size: 14px;
+                 }
+             }
+
+         }
+     }
+}

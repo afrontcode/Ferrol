@@ -1,0 +1,51 @@
+-
+    img_path = 'assets/images/'
+-
+    cardIcons = [
+        {
+            img:"panificadora",
+            title: "Panificacón, pastelería, chocolatería y pastas",
+            descripcion: "Regulador de la actividad microbiológica y enzimática, regulador de fermentación, conservante, potenciador de sabor y color."
+        },
+        {
+            img:"heladeria",
+            title: "Heladería y cadena de frio",
+            descripcion: "El menor punto de congelación de la salmuera mejora la conservación del hielo y la eficiencia de cadena de frío en los procesos de transporte, manipulación y almacenamiento de alimentos perecibles."
+        },
+        {
+            img:"lacteos",
+            title: "Quesos y productos lácteos",
+            descripcion: "Regulador de la actividad microbiológica y enzimática, regulador de fermentación, conservante, potenciador de sabor, color y mejorador de textura."
+        },
+        {
+            img:"embutidos",
+            title: "Embutidos, cárnicos, nuggets y precocidos",
+            descripcion: "Conservante, aglutinante y potenciador de sabor y color."
+        },        
+        {
+            img:"salazones",
+            title: "Salazones",
+            descripcion: "Regulador de la actividad microbiológica y actividad del agua, conservante y corrector de sabor."
+        },
+        {
+            img:"conservas",
+            title: "Conservas y salsas",
+            descripcion: "Conservante, corrector y potenciador de sabor."
+        },
+    ]
+
+
+.usos-section(id="industria") 
+        .usos-section__content
+            .container
+                .row.mb-4
+                    .col-sm-12.text-center.mb-4
+                        h3 Usos de la sal marina en la industria alimentaria
+                .row
+                    each card in cardIcons
+                        .col-sm-2.mb-5
+                            .usos-icon-content.text-center
+                                img(src=img_path+`${card.img}.svg`)
+                                h5  #{card.title}
+                                .line
+                                p #{card.descripcion}

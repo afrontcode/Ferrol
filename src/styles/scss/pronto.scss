@@ -1,0 +1,32 @@
+.soon-section{
+    background-color: #020B08;
+    height: 100%;
+    background-repeat: no-repeat;
+    //background-position-x: center;
+
+    @include mq($from: lg) {
+        background-image: url('/../../assets/images/costasal.jpg');
+     }
+
+     &__content{
+        padding: 9rem 0;
+
+        h4{
+            font-size: 32px;
+            color: #ffffff;
+        }
+
+        .items-soon {
+            text-align: center;
+            margin-top: 3rem;
+            img{
+                width: 160px;
+                margin-bottom: 1rem;
+            }
+            p{
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+        }
+     }
+}

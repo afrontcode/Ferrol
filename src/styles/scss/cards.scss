@@ -1,0 +1,132 @@
+.card{
+    border:none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+    
+    margin-bottom: 1rem;
+}
+
+.card-soporte{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    &_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 40px;
+
+
+        @include mq($from: lg) {
+            flex-direction: row;
+        }
+        
+        .icon{
+            margin-right: 16px;
+        }
+
+        .text{
+            color: #333333;
+            p{
+                margin: 0;
+            }
+        }
+    }
+}
+
+.card-price{
+    
+    margin-top: 2rem;
+
+    ul{
+        padding: 0;
+        list-style: none;}
+
+        .color{
+            background-color: #404040;
+            color: white;
+
+            span{
+                color: #fff;
+            }
+
+            .price-bullet{
+                border-top: 1px solid #757575;
+                padding-top: 1.5rem;
+                border-bottom: 1px solid #757575;
+            }    
+        }
+
+    &_container{
+        padding: 24px 24px;
+
+        span{
+            font-size: 14px;
+            color: #3E3E3E;
+        }
+
+        .iconify{
+            margin-right: 8px;
+        }
+        .pack-content{
+            margin-bottom: 2rem;
+            text-align: center;
+            .title{
+                font-size: 24px;
+                font-weight: 700;
+                color: #F38941;
+            }
+            .price{
+                font-size: 40px;
+            }
+          
+        }
+
+        .bullets{
+         
+
+             li{
+                 font-size: 14px;
+                 display: flex;
+                 margin-bottom: 1rem;
+
+
+                 .bullet-info{
+                    max-width: 272px;
+                     
+                     @include mq($from: lg) {
+                        max-width: 240px;
+                    }
+                     
+                 }
+            }
+
+
+        }
+
+
+        .price-bullet{
+            border-top: 1px solid #e0e0e0;
+            padding-top: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+
+            
+            &_content{
+                display: flex;
+                margin-bottom: 1rem;
+            }
+
+            &_info{
+                font-size: 14px;
+                max-width: 272px;
+
+                @include mq($from: lg) {
+                    max-width: 237px;
+                }
+            }
+        }
+
+        .price-info{
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+} 

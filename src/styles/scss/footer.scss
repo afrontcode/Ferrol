@@ -1,0 +1,114 @@
+.footer{
+    background-color: #fff;
+    padding: 40px 0;
+
+    &_body{
+        display: flex;
+       margin-bottom: 24px;
+        align-items:center;
+        flex-direction: column;
+
+        @include mq($from: lg) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 0px;
+        }
+
+        .footer-left{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            @include mq($from: lg) {
+                text-align: initial;
+            }
+
+            .logo{
+                margin-bottom: 2rem;
+                img{
+                    width: 150px;
+                }
+            }
+
+            .info{
+                color: #00407E;
+                font-size: 14px;
+    
+                .info-item{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                
+                    img{
+                        width: 16px;
+                        margin-right: 4px;
+                    }
+    
+                    p{
+                        margin-bottom: 0;
+                    }
+    
+    
+                }
+    
+                .info-item:nth-child(4){
+                    margin-top: 2rem;
+                    img{
+                        width: 50px;
+                    }
+    
+                    p{
+                        max-width: 300px;
+    
+                    }
+                }
+        }
+    }
+        .footer-right{
+
+            .formulario{
+                h6{
+                    font-size: 18px;
+                    color:#00407E ;
+                }
+                .formulario-content {
+                    text-align: center;
+                    border: 2px solid #00407E;
+                    padding: 1rem;
+
+                    p{
+                        font-size: 14px;
+                        color:#00407E ;
+                    }
+
+                    .form-group  {
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .form-control{
+                        font-size: 14px !important;
+                        border-color: #00407E ;
+                    }
+
+                    button{
+                        width: 100%;
+                        margin-top: 1rem;
+                        background-color: #00407E;
+                        border-color:#00407E ;
+                    }
+                }
+
+                label{
+                    font-size: 12px;
+                    color:#00407E ;
+                }
+            }
+        }
+
+
+
+
+    }
+
+
+}

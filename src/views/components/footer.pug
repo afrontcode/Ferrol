@@ -1,0 +1,52 @@
+-
+    img_path = 'assets/images/'
+
+section.footer(id="contacto") 
+    .container
+        .footer_body 
+            .footer-left
+                .logo
+                    img(src=img_path+"logo-blue.svg")
+                .info
+                    .info-item
+                        img(src=img_path+"ubicacion.svg") 
+                        p Jr. Villavicencio 250 Chimbote, Ancash, Perú
+                    .info-item
+                        img(src=img_path+"phone.svg") 
+                        p (043) 320994 / 994 057 240 / 998325505
+                    .info-item
+                        img(src=img_path+"envelop.svg") 
+                        a(href="mailto:ventas.empresas@ferrol.pe") ventas.empresas@ferrol.pe
+                    .info-item
+                        img(src=img_path+"heart.svg") 
+                        p Consume sal marina moderadamentepara una vida saludable 
+            .footer-right
+            
+                .formulario 
+                    h6 ¿Quieres ser distribuidor autorizado en tu ciudad ?
+                    .formulario-content 
+                        p Completa el formulario y te contactaremos.
+                        form   
+                            .form-group   
+                                input(type="text" class="form-control" id="inputEmpresa"  placeholder="Empresa:")
+                            .form-group   
+                                input(type="text" class="form-control" id="inputRucDni"  placeholder="R.U.C. o D.N.I.:")
+                            .form-group   
+                                input(type="text" class="form-control" id="inputName"  placeholder="Nombres y Apellidos:")
+                            .form-group   
+                                input(type="email" class="form-control" id="inputEmail"  placeholder="Email:")
+                            .form-group   
+                                input(type="text" class="form-control" id="inputPhone"  placeholder="Teléfono o celular:")
+                            .form-group   
+                                input(type="text" class="form-control" id="inputCity"  placeholder="Ciudad:")
+                            textarea(class="form-control" id="textarea" rows="3"  placeholder="Coméntanos sobre tu distribuidora:")
+                        button(class="btn btn-primary") Enviar
+                    label Todos los campos deben ser llenados.
+                            
+                        
+            
+        .footer_foot
+
+            .social
+
+                 

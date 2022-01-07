@@ -1,0 +1,130 @@
+.modal-dialog{
+    margin: 10rem auto;
+}
+
+.modal-close-button{
+    text-align: right;
+    button{
+        border-radius: 18%;
+    }
+}
+
+@media (min-width: 992px){
+.modal-lg, .modal-xl {
+    max-width: 900px;
+}
+}
+
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    
+    
+
+    
+    @include mq($from: lg) {
+        flex-direction: row;
+    }
+
+    .modal-image{
+        img{
+            width: 400px;
+            height: 446px;
+            object-fit: cover;
+        }
+    }
+
+    .modal-body{
+        padding: 2rem;
+
+
+        h4{
+            font-size: 50px;
+        }
+
+        .descripcion{
+            font-size: 14px;
+        }
+
+        .item {
+           p{
+            margin-bottom: 6px;
+           }
+        }
+    }
+}
+
+.blue-modal{
+    background-color: #023360;
+    color: #ffffff;
+}
+
+.line{
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 1.5rem;
+}
+
+.modal-industrias{
+
+    .title{
+        
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        img{
+            width: 45px;
+            margin-right: 1rem;
+        }
+
+        h5{
+            font-size: 24px;
+            font-weight: bold;
+            max-width: 245px;
+            color: #00407E;
+        }
+    }
+
+    .modal-image{
+        p{
+            font-size: 14px;
+            background: linear-gradient(90deg, rgba(29,29,29,1) 0%, rgba(25,25,25,1) 35%, rgba(0,0,0,0) 100%);
+            position: absolute;
+            bottom: 18rem;
+            color: #ffffff;
+            padding: 0.5rem;
+            max-width: 225px;
+            margin-top: 2rem;
+            padding-left: 2rem;
+            @include mq($from: lg) {
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    .descripcion-title {
+        h6{
+            color: #00407E;
+            font-weight: bold;
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+
+    .items {
+        font-size: 13px;
+
+        ul{
+            padding-left: 0.2rem;
+
+            li{
+                list-style: none;
+            }
+        }
+    }
+
+}

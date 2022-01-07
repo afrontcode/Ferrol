@@ -1,0 +1,48 @@
+-
+    img_path = 'assets/images/'
+    // /src/image/
+header.m-header
+    .container
+        a(href="" class="m-header__logo")
+            img(src= img_path+"logo-black.svg")
+        nav(class="m-header__menu")
+            -
+                menu = [
+                    {
+                        text: 'Home',
+                        url: '/',
+                        dataLabel: 'Home'
+                    },
+                    {
+                        text: 'Características',
+                        url: '#caracteristicas',
+                        dataLabel: 'Características'
+                    },
+                    {
+                        text: 'Productos',
+                        url: '#productos',
+                        dataLabel: 'Productos'
+                    },
+                    {
+                        text: 'Composición',
+                        url: '#composicion',
+                        dataLabel: 'Composición'
+                    },
+                    {
+                        text: 'Industria',
+                        url: '#industria',
+                        dataLabel: 'Industria'
+                    },
+                    {
+                        text: 'Contacto',
+                        url: '#contacto',
+                        dataLabel: 'Contacto'
+                    }
+                ]
+            ul
+                each menu_item in menu
+                    li
+                        a(href=menu_item.url title=menu_item.text class="m-anchor" data-event="virtualEvent", data-category="Ferrol - Menu", data-action="click") #{menu_item.text}
+               
+    a(href="javascript:void(0)" class="m-abosolute-vertical m-header__open-menu")
+               

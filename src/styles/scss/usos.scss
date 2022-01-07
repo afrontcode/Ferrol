@@ -1,0 +1,32 @@
+.usos-section {
+    background: linear-gradient(90deg, rgba(0,36,68,1) 0%, rgba(2,44,83,1) 35%, rgba(8,82,182,1) 100%); 
+    padding-top: 8rem;
+    padding-bottom: 1rem;
+
+    .usos-icon-content{
+        color: #ffffff;
+        img{
+            width: 80px;
+            max-height: 80px;
+        }
+        h5{
+            
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+
+            @include mq($from: lg) {
+                font-size: 14px;
+                height: 50px;
+             }
+        }
+        p{
+            text-align: center;
+            font-size: 16px;
+
+            @include mq($from: lg) {
+                text-align: left;
+                font-size: 14px;
+             }
+        }
+    }
+}
