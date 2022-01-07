@@ -100,7 +100,7 @@
             padding-left: 2rem;
             @include mq($from: lg) {
                 top: 0;
-                bottom: 0;
+                bottom: auto;
             }
         }
     }
