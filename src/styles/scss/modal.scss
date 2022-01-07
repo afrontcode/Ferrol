@@ -4,8 +4,15 @@
 
 .modal-close-button{
     text-align: right;
+    position: relative;
+    left: 12px;
+    z-index: 2;
+    top: 13px;
     button{
-        border-radius: 18%;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
     }
 }
 
